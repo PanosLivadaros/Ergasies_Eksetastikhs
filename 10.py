@@ -9,6 +9,7 @@ def integer_multiple(z):
     if z % 7 == 0:
         count7 += 1
 
+
 count2 = count3 = count5 = count7 = 0
 decimal_array = []
 file = input("Give a .txt file to process: \n")
