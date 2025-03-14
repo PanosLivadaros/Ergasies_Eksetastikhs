@@ -1,5 +1,6 @@
 import random
 
+
 def placing(piece):
     a = random.randint(0, 7)
     b = random.randint(0, 7)
@@ -8,10 +9,12 @@ def placing(piece):
         b = random.randint(0, 7)
     chessboard[a][b] = piece
 
+
 def index_2d(my_list, v):
     for i, x in enumerate(my_list):
         if v in x:
             return i, x.index(v)
+
 
 def checking(x, y):
     global player1_points, player2_points
@@ -43,6 +46,7 @@ def checking(x, y):
             else:
                 continue
             break
+
 
 player1_points = player2_points = 0
 for z in range(100):
