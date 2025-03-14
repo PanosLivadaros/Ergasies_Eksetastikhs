@@ -1,5 +1,6 @@
 import random
 
+
 def placing(piece, m, n):
     a = random.randint(0, m-1)
     b = random.randint(0, n-1)
@@ -8,10 +9,12 @@ def placing(piece, m, n):
         b = random.randint(0, n-1)
     chessboard[a][b] = piece
 
+
 def index_2d(my_list, v):
     for i, x in enumerate(my_list):
         if v in x:
             return i, x.index(v)
+
 
 def checking(x, y, k, l):
     global player1_points, player2_points
@@ -40,12 +43,13 @@ def checking(x, y, k, l):
                 continue
             break
 
+
 def base(m, n):
     global chessboard, player1_points, player2_points
     player1_points = 0
     player2_points = 0
     for z in range(100):
-        chessboard = [[0] * n for f in range(m)]
+        chessboard = [[0] * n for _ in range(m)]
         placing("white rook", m, n)
         placing("black bishop", m, n)
         checking("black bishop", True, m, n)
@@ -55,7 +59,8 @@ def base(m, n):
             player2_points += 1
     print("For game with chessboard size: ", m, "x", n, ": \nAfter 100 games, player 1 has:", player1_points, "points and player 2 has:", player2_points, "points.")
 
-chessboard=[]
+
+chessboard = []
 player1_points = player2_points = 0
 base(8, 8)
 base(7, 8)
