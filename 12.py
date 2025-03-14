@@ -2,8 +2,10 @@ from urllib.request import Request, urlopen
 import json
 from time import sleep
 
+
 def max_consecutive(input_str, w):
     return max(map(len, input_str.split(w)))
+
 
 rand_list = []
 print("Calculating...")
